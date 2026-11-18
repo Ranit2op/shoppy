@@ -1,7 +1,7 @@
 # 🛍️ Shoppy - Smart Shopping E-Commerce Mobile App
 
+[![Download APK](https://img.shields.io/badge/Download-Shoppy%20APK%20(v1.0.0)-brightgreen?style=for-the-badge&logo=android)](https://github.com/Ranit2op/shoppy/releases/download/v1.0.0/Shoppy-v1.0.0.apk)
 [![Release](https://img.shields.io/github/v/release/Ranit2op/shoppy?style=for-the-badge&color=blue)](https://github.com/Ranit2op/shoppy/releases)
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)](LICENSE)
 
 A modern, fast, and feature-rich E-Commerce mobile shopping application built with **React Native** and **Expo SDK 52**. Powered by reliable real-time product APIs.
 
@@ -63,7 +63,4 @@ The output APK will be generated at:
 android/app/build/outputs/apk/release/app-release.apk
 ```
 
----
 
-## 📄 License
-This project is open source and available under the [MIT License](LICENSE).
