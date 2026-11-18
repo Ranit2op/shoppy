@@ -1,50 +1,69 @@
-# Welcome to your Expo app 👋
+# 🛍️ Shoppy - Smart Shopping E-Commerce Mobile App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+[![Release](https://img.shields.io/github/v/release/Ranit2op/shoppy?style=for-the-badge&color=blue)](https://github.com/Ranit2op/shoppy/releases)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)](LICENSE)
 
-## Get started
+A modern, fast, and feature-rich E-Commerce mobile shopping application built with **React Native** and **Expo SDK 52**. Powered by reliable real-time product APIs.
 
-1. Install dependencies
+---
 
-   ```bash
-   npm install
-   ```
+## ✨ Features
 
-2. Start the app
+- 🛒 **Explore Products:** Browse thousands of trending items across multiple categories (Electronics, Fashion, Jewelery, and more).
+- 🔍 **Real-time Search:** Instant keyword search across all products and categories.
+- ⚡ **Flash Deals & Discounts:** Dynamic product discount badges with up to 50% OFF offers.
+- 🛍️ **Cart System:** Add items to cart, modify quantities (`+` / `-`), view item totals, and remove items with confirmation alerts.
+- 📦 **Free Delivery Perks:** Free delivery progress banner on orders above ₹499.
+- 💳 **Smooth Checkout:** Order summary, bill breakdown (Item Total, Delivery Fee, Taxes), and instant order placement with confirmation.
+- 🎨 **Modern UI/UX:** Clean indigo-purple theme, custom 3D glossy shopping bag mascot icon, and custom splash screen.
 
-   ```bash
-    npx expo start
-   ```
+---
 
-In the output, you'll find options to open the app in a
+## 🛠️ Tech Stack
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+- **Framework:** React Native (0.76.9) & Expo SDK 52
+- **Router:** Expo Router (File-based routing)
+- **State Management:** React Context API & `@react-native-async-storage/async-storage`
+- **Native Platform:** Android (Gradle, Kotlin, Java 17)
+- **APIs:** FakeStoreAPI & DummyJSON
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+---
 
-## Get a fresh project
+## 🚀 Getting Started
 
-When you're ready, run:
-
+### 1. Clone & Install
 ```bash
-npm run reset-project
+# Clone the repository
+git clone https://github.com/Ranit2op/shoppy.git
+cd shoppy
+
+# Install dependencies
+npm install
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+### 2. Run Development Server
+```bash
+npx expo start
+```
+- Press `a` for Android Emulator / Phone (via Expo Go)
+- Press `w` for Web preview
 
-## Learn more
+---
 
-To learn more about developing your project with Expo, look at the following resources:
+## 📱 Build Standalone Android APK
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+```bash
+# Build release APK
+cd android
+.\gradlew.bat assembleRelease
+```
 
-## Join the community
+The output APK will be generated at:
+```
+android/app/build/outputs/apk/release/app-release.apk
+```
 
-Join our community of developers creating universal apps.
+---
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+## 📄 License
+This project is open source and available under the [MIT License](LICENSE).
