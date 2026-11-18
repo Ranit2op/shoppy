@@ -15,7 +15,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { Ionicons } from "@expo/vector-icons";
 import Header from "../components/Header";
 import ProductCard from "../components/ProductCard";
-import { fetchAllProducts, fetchProductsByCategory } from "../services/api";
+import { fetchAllProducts, fetchProductsByCategory, FALLBACK_PRODUCTS } from "../services/api";
 import { useCart } from "../context/CartContext";
 
 const CATEGORIES = [
@@ -30,16 +30,17 @@ export default function Home() {
   const router = useRouter();
   const { getItemsCount, getTotalPrice } = useCart();
 
-  const [products, setProducts] = useState<any[]>([]);
-  const [loading, setLoading] = useState(true);
+  const [products, setProducts] = useState<any[]>(FALLBACK_PRODUCTS);
+  const [loading, setLoading] = useState(false);
   const [refreshing, setRefreshing] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("all");
 
   const loadProducts = useCallback(async (cat = "all") => {
-    setLoading(true);
     const data = await fetchProductsByCategory(cat);
-    setProducts(data || []);
+    if (data && data.length > 0) {
+      setProducts(data);
+    }
     setLoading(false);
     setRefreshing(false);
   }, []);

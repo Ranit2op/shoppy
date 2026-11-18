@@ -14,7 +14,7 @@ const enrichProduct = (p) => {
   };
 };
 
-const FALLBACK_PRODUCTS = [
+export const FALLBACK_PRODUCTS = [
   {
     id: 1,
     title: "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
