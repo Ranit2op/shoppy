@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 import { useRouter } from "expo-router";
-import { ArrowLeft } from "react-native-feather";
+import { Ionicons } from "@expo/vector-icons";
 import CartIcon from "./CartIcon";
 
 export default function Header({ title = "Shoppy", showBackButton = false }) {
@@ -16,7 +16,7 @@ export default function Header({ title = "Shoppy", showBackButton = false }) {
             style={styles.backButton}
             hitSlop={{ top: 10, bottom: 10, left: 10, right: 10 }}
           >
-            <ArrowLeft stroke="#fff" width={22} height={22} />
+            <Ionicons name="arrow-back" size={22} color="#fff" />
           </TouchableOpacity>
         )}
         <View>

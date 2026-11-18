@@ -2,7 +2,7 @@ import React from "react";
 import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
 import { useRouter } from "expo-router";
 import { useCart } from "../context/CartContext";
-import { ShoppingBag } from "react-native-feather";
+import { Ionicons } from "@expo/vector-icons";
 
 export default function CartIcon() {
   const { getItemsCount, loading } = useCart();
@@ -17,7 +17,7 @@ export default function CartIcon() {
       activeOpacity={0.8}
     >
       <View style={styles.iconCircle}>
-        <ShoppingBag stroke="#4F46E5" width={20} height={20} />
+        <Ionicons name="bag-handle" size={20} color="#4F46E5" />
       </View>
       {itemsCount > 0 && (
         <View style={styles.badge}>
